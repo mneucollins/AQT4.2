@@ -6,8 +6,8 @@ import { Router } from '@angular/router';
 @Component({
     templateUrl: './viewblock.component.html',
     styleUrls: [
-        'explore-base.css',
-        './viewblock.component.css'
+        'explore-base.scss',
+        './viewblock.component.scss'
     ]
 })
 

@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 @Component({
     templateUrl: './explore.component.html',
     styleUrls: [
-        './explore-base.css',
-        './explore.component.css'
+        './explore-base.scss',
+        './explore.component.scss'
     ]
 })
 

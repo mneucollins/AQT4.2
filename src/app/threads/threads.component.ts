@@ -5,8 +5,8 @@ import { Router } from '@angular/router';
   selector: 'app-threads',
   templateUrl: './threads.component.html',
   styleUrls: [
-    '../explore/explore-base.css',
-    './threads.component.css'
+    '../explore/explore-base.scss',
+    './threads.component.scss'
   ]
 })
 export class ThreadsComponent implements OnInit {

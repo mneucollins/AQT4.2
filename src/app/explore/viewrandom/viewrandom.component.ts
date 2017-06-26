@@ -6,8 +6,8 @@ import { BlockService } from '../../services/block.service';
   selector: 'app-viewrandom',
   templateUrl: './viewrandom.component.html',
   styleUrls: [
-    '../explore-base.css',
-    './viewrandom.component.css']
+    '../explore-base.scss',
+    './viewrandom.component.scss']
 })
 export class ViewRandomComponent implements OnInit {
     constructor ( private _router: Router){};

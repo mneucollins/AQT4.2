@@ -4,8 +4,8 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['../home.component.css',
-    './about.component.css'
+  styleUrls: ['../home.component.scss',
+    './about.component.scss'
   ]
 })
 export class AboutComponent implements OnInit {

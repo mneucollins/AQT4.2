@@ -7,8 +7,8 @@ import { ITour } from '../../interfaces/tour';
 @Component({
     templateUrl: './viewtour.component.html',
     styleUrls: [
-        '../explore-base.css',
-        './viewtour.component.css'
+        '../explore-base.scss',
+        './viewtour.component.scss'
     ],
     providers: [TourService]
 })

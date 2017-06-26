@@ -8,8 +8,8 @@ import { ITour } from '../../interfaces/tour';
 @Component({
     templateUrl: './taketour.component.html',
     styleUrls: [
-        '../explore-base.css',
-        './taketour.component.css'
+        '../explore-base.scss',
+        './taketour.component.scss'
     ],
     providers: [TourService],
 
