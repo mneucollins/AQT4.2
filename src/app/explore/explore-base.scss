@@ -1,3 +1,5 @@
+@import "~variables.scss";
+
 #background_2 {
   /*explore page*/
     background-image: url("../../assets/images/backgrounds/background2.jpg");
@@ -8,9 +10,11 @@
     min-height: 1200px;
     text-align: center;
     overflow: hidden;
-    margin-left: -20px;
-    margin-right: -20px;
-    background-color: #d9708f;
+    margin-left: $bak-margin-left;
+    margin-right: $bak-margin-right;
+    margin-top : $bak-margin-top;
+    margin-bottom: $bak-margin-bottom;
+    background-color: $pink;
 }
 
 .pg-title {

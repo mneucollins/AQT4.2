@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 @Component({
     templateUrl: './participate.component.html',
-    styleUrls: ['./participate.component.css']
+    styleUrls: ['./participate.component.scss']
 })
 
 export class MyParticipationComponent{

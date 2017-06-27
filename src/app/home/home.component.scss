@@ -1,16 +1,23 @@
+@import "~variables.scss";
+
 #background_1{
-  background-image: url("../../assets/images/backgrounds/background_white_c.jpg");
+  background-image: url("~/assets/images/backgrounds/background_white_c.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   /*background-size: auto 100%;*/
   min-height: 1024px;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: $bak-margin-left;
+  margin-right: $bak-margin-right;
+  margin-top : $bak-margin-top;
+  margin-bottom: $bak-margin-bottom;
   text-align: center;
   overflow: hidden;
 }
 
+.container-fluid {
+    overflow: hidden;
+}
 /*.container:before {
     height: 20%;
 }*/
@@ -25,7 +32,6 @@
 .logoContainer img {
   display: inline-block;
   width: 50%;
-  /*position: fixed;*/
 }
 
 

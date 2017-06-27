@@ -1,4 +1,6 @@
 @import "~variables.scss";
+@import "assets/bootstrap-sass/variables";
+@import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
 
 body {
     font-family: "Montserrat", sans-serif;

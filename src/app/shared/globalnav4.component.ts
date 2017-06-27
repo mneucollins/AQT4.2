@@ -6,7 +6,7 @@ import { Location } from '@angular/common';
     selector: 'globalnav4',
     templateUrl: './globalnav4.component.html',
     styleUrls: [
-        './globalnav4.component.css'
+        './globalnav4.component.scss'
         ]
 })
 
