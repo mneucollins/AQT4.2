@@ -9,10 +9,8 @@ body {
 .globalnav {
     background-color: #3A3A3C;
     position: fixed;
-    /*left: 0px;*/
+    left: 0px;
     width: 100%;
-    /*padding-top: 6px;
-    padding-right: 15px;*/
     min-height: 72px; 
     bottom: 0;
     margin-bottom: 0;
@@ -42,7 +40,8 @@ body {
 
 .container-fluid {
     /*overide to take button background to the edge*/
-    padding-left:20px;
+    padding-left:  0px;
+    padding-right: 0px
 }
 
 .pg-title {
@@ -126,6 +125,25 @@ body {
     margin-right: 0px; 
     }
 
+// used for aligning the right icon vcenter and right
+//vcenter-content must be within a vcenter-container
+.vcenter-container {
+  position: relative;
+}
+
+.vcenter-content {
+  // width: 50%;
+  //height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+.vcenter-content.right-align {
+  left: auto; right: 8%;
+  text-align: right;
+}
+
 .vcenter {
     display: inline-block;
     vertical-align: middle;
@@ -193,16 +211,19 @@ body {
   padding: 0px; }
 
 .icon-home-text-reverse {
-  background-position: -60px -144px; }
+  background-position: $icon_x_size*1px $icon_y_size*2px; }
 
 .icon-info-text-reverse {
-  background-position: -60px 0px; }
+  background-position: $icon_x_size*1px $icon_y_size*0px; }
 
 .icon-back-text-reverse {
-  background-position: -60px -72px; }
+  background-position: $icon_x_size*1px $icon_y_size*1px; }
 
 .icon-thread-text-reverse {
-  background-position: -60px -360px; }
+  background-position: $icon_x_size*1px $icon_y_size*5px; }
 
 .icon-favorite-text-reverse {
-  background-position: -60px -432px; }
+  background-position: $icon_x_size*1px $icon_y_size*6px; }
+
+.icon-tour-text-reverse {
+  background-position: $icon_x_size*1px $icon_y_size*7px; }

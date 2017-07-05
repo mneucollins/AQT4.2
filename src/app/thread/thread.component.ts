@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-thread',
   //templateUrl: './thread.component.html',
-  //styleUrls: ['./thread.component.css']
+  //styleUrls: ['./thread.component.scss']
   template: `
     <h2>Thread Test</h2>
       <p (click)="getNext()">Next</p>

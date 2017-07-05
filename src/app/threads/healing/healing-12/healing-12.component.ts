@@ -5,9 +5,9 @@ import { Router } from '@angular/router';
   selector: 'app-healing-12',
   templateUrl: './healing-12.component.html',
   styleUrls: [
-    '../../threads-base.css',
-    '../healing-base.css',
-    './healing-12.component.css'
+    '../../threads-base.scss',
+    '../healing-base.scss',
+    './healing-12.component.scss'
   ]
 })
 

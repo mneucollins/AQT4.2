@@ -68,17 +68,17 @@
         letter-spacing: 2px;
         font-size: 2.3em;
         line-height: 1.2em;
-        margin-top: 2%;
+        margin-top: 8%;
       }
     }
 
 /*generic smartphone in landscape mode*/
 @media only screen 
-    and (min-width: 320px) 
-    and (max-width: 736px) 
+    and (min-width: 736px) 
+    and (max-width: 320px) 
     and (orientation: landscape) {
       .explore_stories-heading {
-        font-size: 3em;
+        font-size: 2em;
         margin-top: 2%;
       }
     

@@ -6,9 +6,9 @@ import { Router } from '@angular/router';
   selector: 'app-aids-children-01',
   templateUrl: './aids-children-01.component.html',
   styleUrls: [
-    '../../threads-base.css',
-    '../aids-children-base.css',
-    './aids-children-01.component.css'
+    '../../threads-base.scss',
+    '../aids-children-base.scss',
+    './aids-children-01.component.scss'
   ]
 })
 export class AidsChildren01Component implements OnInit {

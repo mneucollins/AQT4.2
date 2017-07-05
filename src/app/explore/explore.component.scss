@@ -1,11 +1,4 @@
-.explore_the_quilt-label {
-    font-size: 1.4em;
-    line-height: 1.9em;
-    text-align: left;
-    text-transform: uppercase;
-    padding-top: 1%;
-    padding-bottom: 1%; 
-}
+@import "~variables.scss";
 
 #explore-heading{
     text-align: left;
@@ -14,16 +7,19 @@
     letter-spacing: 2px; 
 }
 
-#explore_stories-button, #explore_the_quilt-button {
-    /*width: 100%;*/
-    top: 40%;
+.button-default {
+    display: table;
+    width: 100%;
     padding-left: 5%;
     padding-top: 10px;
-    padding-bottom: 10px;
-    /*margin-left: -20px;
-    margin-top: 10px;*/
-    background-color: #F495B4; 
+    padding-bottom: 10px;    
+}
+#explore_the_quilt-button {
+    @extend .button-default;
+    top: 40%;
+    background-color: $lt-pink; 
 }
 
 #explore_stories-button {
-  background-color: #EF4036; }
+    @extend .button-default;   
+    background-color: $bittersweet; }

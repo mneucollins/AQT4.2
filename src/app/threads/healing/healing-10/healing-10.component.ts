@@ -6,9 +6,9 @@ import { Router } from '@angular/router';
   selector: 'app-healing-10',
   templateUrl: './healing-10.component.html',
   styleUrls:   [
-    '../../threads-base.css',
-    '../healing-base.css',
-    './healing-10.component.css'
+    '../../threads-base.scss',
+    '../healing-base.scss',
+    './healing-10.component.scss'
   ]
 })
 export class Healing10Component implements OnInit {

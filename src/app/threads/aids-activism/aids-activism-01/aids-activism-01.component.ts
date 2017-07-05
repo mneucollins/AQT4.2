@@ -5,9 +5,9 @@ import { Router } from '@angular/router';
     selector: 'app-aids-activism-01',
     templateUrl: './aids-activism-01.component.html',
     styleUrls: [
-        '../../threads-base.css',
-        '../aids-activism-base.css',
-        './aids-activism-01.component.css'
+        '../../threads-base.scss',
+        '../aids-activism-base.scss',
+        './aids-activism-01.component.scss'
     ]
 })
 export class AidsActivism01Component implements OnInit {

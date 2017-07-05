@@ -6,7 +6,7 @@ var TESTSLIDE: String = "<p>Lorem ipsum etc.</p><p><img src=\"http://tambourelli
 @Component({
   selector: 'app-thread-slide',
   templateUrl: './thread-slide.component.html',
-  styleUrls: ['./thread-slide.component.css']
+  styleUrls: ['./thread-slide.component.scss']
 })
 export class ThreadSlideComponent implements OnInit {
 

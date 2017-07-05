@@ -5,9 +5,9 @@ import { Router } from '@angular/router';
   selector: 'app-aids-women-05',
   templateUrl: './aids-women-05.component.html',
   styleUrls: [
-        '../../threads-base.css',
-        '../aids-women-base.css',
-        './aids-women-05.component.css'
+        '../../threads-base.scss',
+        '../aids-women-base.scss',
+        './aids-women-05.component.scss'
     ]
 })
 export class AidsWomen05Component implements OnInit {
