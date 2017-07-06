@@ -1,6 +1,17 @@
-
+@import "~variables.scss";
+@import "~mediaqueries.scss";
 
 .explore_stories-heading {
+  @include bp(iphone){
+    font-size: 2.2em;
+    margin-top: 5%;
+    margin-left: 7%;
+    margin-right: 5%;
+  }
+  @include bp(iphone-portrait2){
+    font-size: 2em;
+    margin-top: 2%;
+  }
   text-align: left;
   text-transform: uppercase;
   font-weight: bold;
@@ -11,7 +22,8 @@
 }
 
 .threads{
-  color: #9f7ad1;
+  // color: #9f7ad1;
+  color: $lavender;
   font-size: 1.5em;
 }
 
@@ -30,7 +42,8 @@
   }
 
 .button-active {
-  background-color: #F495B4; 
+  // background-color: #F495B4; 
+  background-color: $pink; 
 }
 .button-inactive {
   background-color: #AAAAAA;
@@ -56,21 +69,18 @@
   padding-bottom: 1%; }
 
 
-/*generic smartphone in portrait mode*/
-@media only screen 
-    and (min-width: 320px) 
-    and (max-width: 736px) 
-    {
-      .explore_stories-heading {
-        text-align: left;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 2px;
-        font-size: 2.3em;
-        line-height: 1.2em;
-        margin-top: 8%;
-      }
-    }
+// .explore_stories-heading {
+// /       text-align: left;
+//         text-transform: uppercase;
+//         font-weight: bold;
+//         letter-spacing: 2px;
+//         font-size: 2.3em;
+//         line-height: 1.2em;
+//         margin-top: 8%;
+//       }
+//     }
+
+
 
 /*generic smartphone in landscape mode*/
 @media only screen 
