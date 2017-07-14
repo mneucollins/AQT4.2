@@ -1,0 +1,73 @@
+[
+    {
+        "panelId": 1908.1,
+        "panelNum":"01908-1",
+        "blockID":"1908",
+        "dateRecd": "1999-09-01",
+        "blockX1": 0,
+        "blockY1": 0,
+        "blockX2": 1,
+        "blockY2": 2
+    },
+    {
+        "panelId": 1908.2,
+        "panelNum":"01908-2/3",
+        "blockID":"1908",
+        "dateRecd": "1999-09-02",
+        "blockX1": 1,
+        "blockY1": 0,
+        "blockX2": 3,
+        "blockY2": 2
+    },
+    {
+        "panelId": 1908.4,
+        "panelNum":"01908-4",
+        "blockID":"1908",
+        "dateRecd": "1999-09-04",
+        "blockX1": 3,
+        "blockY1": 0,
+        "blockX2": 4,
+        "blockY2": 2
+    },
+    {
+        "panelId": 1908.5,
+        "panelNum":"01908-5",
+        "blockID":"1908",
+        "dateRecd": "1999-09-05",
+        "blockX1": 0,
+        "blockY1": 2,
+        "blockX2": 2,
+        "blockY2": 3
+    },
+    {
+        "panelId": 1908.6,
+        "panelNum":"01908-5",
+        "blockID":"1908",
+        "dateRecd": "1999-09-06",
+        "blockX1": 2,
+        "blockY1": 2,
+        "blockX2": 4,
+        "blockY2": 3
+    },
+    {
+        "panelId": 1908.7,
+        "panelNum":"01908-7",
+        "blockID":"1908",
+        "dateRecd": "1999-09-07",
+        "blockX1": 0,
+        "blockY1": 3,
+        "blockX2": 2,
+        "blockY2": 4
+    },
+    {
+        "panelId": 1908.8,
+        "panelNum":"01908-8",
+        "blockID":"1908",
+        "dateRecd": "1999-09-08",
+        "blockX1": 2,
+        "blockY1": 3,
+        "blockX2": 4,
+        "blockY2": 4
+    }
+
+]
