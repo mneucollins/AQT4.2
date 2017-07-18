@@ -19,7 +19,7 @@ export class ViewBlockComponent implements OnInit {
                  private _blockService: BlockService ){};
     ngOnInit(): void {
 
-//mote I want to get only 1 block but having trouble with that        
+//note I want to get only 1 block but having trouble with that        
         this._blockService.getBlocks()
             .subscribe (blocks=>this.blocks = blocks,
                 error => this.errorMessage = <any>error );
