@@ -1,3 +1,5 @@
+//this functionality has been moved to the-quilt/block component
+
 import { Component, OnInit } from '@angular/core';
 import { IBlock } from '../interfaces/block';
 import { BlockService } from '../services/block.service';
@@ -7,7 +9,7 @@ import { Router } from '@angular/router';
     templateUrl: './viewblock.component.html',
     styleUrls: [
         'explore-base.scss',
-        './viewblock.component.scss'
+        './xviewblock.component.scss'
     ]
 })
 
