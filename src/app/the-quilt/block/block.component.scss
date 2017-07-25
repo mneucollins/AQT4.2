@@ -1,0 +1,21 @@
+@import "~variables.scss";
+
+#block-heading {
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 3em;
+  line-height: 1.2em;
+  margin-top: 2%;
+  /*margin-left: -10%;*/ }
+
+.panel-button {
+  text-align: left;
+  width: 102%;
+  margin-top: 10px;
+  padding-left: 10%;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  background-color: $lt-pink;
+  }

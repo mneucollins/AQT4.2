@@ -12,12 +12,12 @@ import { ITour } from '../interfaces/tour';
 export class TourService {
     //the following loads a local json file. 
     //In most applications this should be replaced with an http request
-    private _tourUrl = 'assets/api/tours/tour.json';
+    private _getTourUrl = 'assets/api/tours/tour.json';
 
     constructor (private _http: Http){}
    
     getTours(): Observable<ITour[]>{
-        return this._http.get(this._tourUrl)
+        return this._http.get(this._getTourUrl)
             .map((response: Response) => <ITour[]> response.json())
             .do (data => console.log( 'All: '+ JSON.stringify(data)))
             .catch (this.handleError);
