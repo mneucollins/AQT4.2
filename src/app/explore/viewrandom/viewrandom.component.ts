@@ -12,6 +12,7 @@ import { BlockService } from '../../services/block.service';
 export class ViewRandomComponent implements OnInit {
     constructor ( private _router: Router){};
     ngOnInit() {
+      
   }
 
 }

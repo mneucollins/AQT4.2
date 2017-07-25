@@ -17,6 +17,8 @@ import { ThreadsComponent } from  './threads/threads.component';
 import { AboutComponent } from './home/about/about.component';
 
 import { ExploreComponent } from './explore/explore.component';
+import { BlockViewComponent } from './the-quilt/block-view/block-view.component';
+//import { BlockComponent } from './the-quilt/block/block.component';
 
 @NgModule({
   imports: [
@@ -45,6 +47,8 @@ import { ExploreComponent } from './explore/explore.component';
     HomeComponent,
     StartComponent,
     AboutComponent,
+    BlockViewComponent,
+    // BlockComponent,
     // GlobalNavComponent,
   ],
   providers: [{provide: APP_BASE_HREF, useValue: '/'}],

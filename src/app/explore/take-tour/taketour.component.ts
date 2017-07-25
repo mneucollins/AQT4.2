@@ -12,7 +12,6 @@ import { ITour } from '../../interfaces/tour';
         './taketour.component.scss'
     ],
     providers: [TourService],
-
 })
 
 export class TakeTourComponent implements OnInit{
