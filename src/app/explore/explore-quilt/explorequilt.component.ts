@@ -39,7 +39,7 @@ export class ExploreQuiltComponent{
         let blockIds : number[] = [1908,3663,3734,5427,5552];
         let randomBlock: number = blockIds[this._blockService.getRandomIntInclusive(0,4)]
         
-        alert (randomBlock);
+        // alert (randomBlock);
         //let route = '/block-view/'+this.randomBlock
         //console.log(route);
         this._router.navigate(['/block',randomBlock]);
