@@ -4,6 +4,7 @@
         "memorializedFirst": "Armando A.",
         "memorializedLast": "Rocha",
         "panelId": "1908.1",
+        "blockId": "1908",
         "dob": "1958",
         "dod": "1998"
     },
@@ -12,6 +13,7 @@
         "memorializedFirst": "Scott E.",
         "memorializedLast": "Meldrum",
         "panelId": "1908.2",
+        "blockId": "1908",
         "dob": "1958",
         "dod": "1998"
     },
@@ -20,6 +22,7 @@
         "memorializedFirst": "Philip J.",
         "memorializedLast": "Ferrara",
         "panelId": "1908.3",
+        "blockId": "1908",
         "dob": "1958-06-23",
         "dod": "1994-02-27"
     },
@@ -28,6 +31,7 @@
         "memorializedFirst": "Izzy",
         "memorializedLast": "Poratta",
         "panelId": "1908.4",
+        "blockId": "1908",
         "dob": "1971-12-02",
         "dod": "1994-11-09"
     },
@@ -36,6 +40,7 @@
         "memorializedFirst": "CarmeN",
         "memorializedLast": "Poratta",
         "panelId": "1908.5",
+        "blockId": "1908",
         "dob": "",
         "dod": ""
     },
@@ -44,6 +49,7 @@
         "memorializedFirst": "Ron",
         "memorializedLast": "Tully",
         "panelId": "1908.6",
+        "blockId": "1908",
         "dob": "1948-04-04",
         "dod": "1997-01-06"
     },
@@ -52,14 +58,25 @@
         "memorializedFirst": "Keith",
         "memorializedLast": "",
         "panelId": "1908.7",
+        "blockId": "1908",
         "dob": "1963",
         "dod": "1995"
     },
-        {
+    {
+        "memorializedId": "1908.7.002",
+        "memorializedFirst": "Bob",
+        "memorializedLast": "",
+        "panelId": "1908.7",
+        "blockId": "1908",
+        "dob": "1958",
+        "dod": "1995"
+    },
+    {
         "memorializedId": "1908.8.001",
         "memorializedFirst": "Alejandro",
         "memorializedLast": "Mdjia",
         "panelId": "1908.8",
+        "blockId": "1908",
         "dob": "1959-11-07",
         "dod": "1997-03-22"
     }

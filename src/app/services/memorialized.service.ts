@@ -4,20 +4,20 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-import { IPanel } from '../interfaces/panel';
+import { IMemorialized } from '../interfaces/memorialized';
 // import { PANELS } from './mock-panels';
 
 @Injectable()
 
-export class PanelService{
+export class MemorializedService{
     //replace this with an http api request to collective access
-    private _getPanelInfoUrl = 'assets/api/the-quilt/panels.json';
+    private _getMemorializedInfoUrl = 'assets/api/the-quilt/memorialized.json';
 
     constructor (private _http: Http){}
 
-    getPanelInfo( blockId ) : Observable<IPanel[]>{
-            return this._http.get(this._getPanelInfoUrl)
-            .map((response:Response)=><IPanel[]> response.json())
+    getMemorializedInfo( blockId ) : Observable<IMemorialized[]>{
+            return this._http.get(this._getMemorializedInfoUrl)
+            .map((response:Response)=><IMemorialized[]> response.json())
             .do (data=>console.log( 'ALL: '+JSON.stringify(data)))
             .catch (this.handleError);
     }  
@@ -27,9 +27,3 @@ export class PanelService{
         return Observable.throw(error.json().error || 'Server Error');
     }
 }
-
-
-//   not used:
-//     getRandomPanel(): HTMLImageElement {
-//       return PANELS[Math.round(Math.random() * (PANELS.length - 1))];
-//   }

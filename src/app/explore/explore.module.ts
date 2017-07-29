@@ -13,7 +13,7 @@ import { ThreadsComponent } from '../threads/threads.component';
 import { ViewRandomComponent } from './viewrandom/viewrandom.component';
 import { BlockComponent } from '../the-quilt/block/block.component';
 
-import { BlockViewComponent } from '../the-quilt/block-view/block-view.component';
+// import { BlockViewComponent } from '../the-quilt/block-view/block-view.component';
 
 // import { ViewBlockComponent } from './viewblock.component';
 
