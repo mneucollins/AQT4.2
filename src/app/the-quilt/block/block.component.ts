@@ -6,6 +6,8 @@ import { BlockService } from '../../services/block.service';
 import { IBlock } from '../../interfaces/block';
 import { PanelService } from '../../services/panel.service';
 import { IPanel } from '../../interfaces/panel';
+import { MemorializedService } from '../../services/memorialized.service';
+import { IMemorialized } from '../../interfaces/memorialized';
 
 
 @Component({
@@ -18,7 +20,8 @@ import { IPanel } from '../../interfaces/panel';
   ],
   providers: [
     BlockService,
-    PanelService
+    PanelService,
+    MemorializedService
   ]
 })
 
@@ -31,7 +34,9 @@ export class BlockComponent implements OnInit {
   constructor( 
     private _route: ActivatedRoute, 
     private _blockService: BlockService,
-    private _panelService: PanelService) {}
+    private _panelService: PanelService,
+    private _memorializedService: MemorializedService
+  ) {}
 
   ngOnInit():void {
     let blockId = +this._route.snapshot.params['blockId'];
@@ -41,7 +46,8 @@ export class BlockComponent implements OnInit {
         error => this.errorMessage = <any>error);
 
     // TODO: Get panel info and feed to collapsible in template
-    this._panelService.getPanelInfo(blockId)
+    this._panelService.getPanelInfo(blockId);
+    this._memorializedService.getMemorializedInfo(blockId);
 
   }
 }
