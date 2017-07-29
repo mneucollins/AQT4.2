@@ -1,6 +1,10 @@
 export interface IPanelmaker {
     panelmakerId: number;
-    panelmaker: string;
+    panelId: number;
+    blockId: number;
+    panelmakerFirst: string;
+    panelmakerLast: string;
+    relationship: string;
     panelmakerInfo: string; 
-    //what info do we want on panelmaker, e.g. address, publicity, etc.
+    //what other info do we want on panelmaker?
 }

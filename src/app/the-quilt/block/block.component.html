@@ -12,33 +12,23 @@
 				<img src='/assets/images/blockimg/{{block.imageUrl}}' width="100%">
 			</div>
 
-			<p>TODO: convert these to bootstrap collapsible with panel info, native bootstrap does not work, may need to install ngx-bootstrap directives</p>
 			<div class = "col-sm-4">
-				<div class = "row panel-button">
-					<span class="txt-reverse">Panel1</span>
-				</div>
-				<div class = "row panel-button">
-					Panel2
-				</div>
-				<div class = "row panel-button">
-					Panel3
-				</div>
-				<div class = "row panel-button">
-					Panel4
-				</div>
-				<div class = "row panel-button">
-					Panel5
-				</div>
-				<div class = "row panel-button">
-					Panel6
-				</div>
-				<div class = "row panel-button">
-					Panel7
-				</div>
-				<div class = "row panel-button">
-					Panel8
-				</div>
+				<div *ngFor="let panel of panels">
+					<div [id]="panel.panelId" 
+						class = "row panel-button txt-reverse" 
+						(click)='toggleHidden(panel.panelId)'>
+						Quilt Panel: {{panel.panelNum}}
+					</div>
 
+					<div class="panel-info" [hidden]="show!==panel.panelId">
+						{{panel.panelId}}
+						{{show}}
+						Panel Info Goes Here and will be hidden <br />
+						with toggled visibility based upon<br />
+						something not yet written.
+					
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

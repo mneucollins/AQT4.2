@@ -19,3 +19,15 @@
   padding-bottom: 4px;
   background-color: $lt-pink;
   }
+
+.panel-info {
+  background-color: $bittersweet;
+  text-align: left;
+  color: $reverse;
+  margin-left: 3%;
+  padding-left: 2%;
+  // visibility: hidden;
+
+[hidden] { display: none !important;}
+
+}
