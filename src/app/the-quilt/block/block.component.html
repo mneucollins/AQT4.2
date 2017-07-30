@@ -8,18 +8,21 @@
 			</div>
 		</div>
 		<div class="row spaceabove20">
-			<div class = "col-xs-offset-1 col-xs-10 col-sm-7">
-				<img src='/assets/images/blockimg/{{block.imageUrl}}' width="100%">
+			<div class = "col-sm-7 col-sm-offset-1 pad-adjust-left">
+				<img src='/assets/images/blockimg/{{block.imageUrl}}'  class="panel-img">
 			</div>
 			<div class = "col-sm-4 col-xs-11">
 				<div *ngFor="let panel of panels">
-					<div [id]="panel.panelId" 
-						class = "row panel-button txt-reverse" 
+					<div class="row spaceabove20 vcenter-container panel-button" 
+						[id]="panel.panelId" 
 						(click)='toggleHidden(panel.panelId)'>
-						Quilt Panel: {{panel.panelNum}}
-					</div>
 
-					<div class="panel-info" [hidden]="show!==panel.panelId">
+						<div class="col-xs-9 button-label txt-reverse">
+							{{panel.panelNum}}:<br />{{buildNameLabel(panel.panelId)}} 
+						</div>
+						<div class="col-xs-2 icon-down vcenter-content right-align"  [hidden]="show===panel.panelId"></div>
+					</div>
+					<div class="panel-info row" [hidden]="show!==panel.panelId">
 						<ul>
 							<li *ngIf="panel.dateRecd">Date Panel Received: {{panel.dateRecd}}<br /></li>
 							<li> Memorialized:
@@ -48,8 +51,10 @@
 							</div>
 						</ul>					
 					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>
+	<globalnav4></globalnav4>
 </div>

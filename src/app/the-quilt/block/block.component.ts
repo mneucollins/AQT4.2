@@ -16,10 +16,10 @@ import { IPanelmaker } from '../../interfaces/panelmaker';
   selector: 'app-block',
   templateUrl: './block.component.html',
   styleUrls: [
-    'block.component.scss',
+    '../../explore/explore-base.scss',
     '../the-quilt-base.scss',
-    '../../explore/explore-base.scss'
-  ],
+    'block.component.scss',
+  ],  
   providers: [
     BlockService,
     PanelService,
@@ -77,6 +77,25 @@ export class BlockComponent implements OnInit {
     this.show = item;
     //this should be called upon to open up the panel information for a found panel
   }
-  
-
+ 
+  nameLbl: string;
+  buildNameLabel(panelId): string{
+    this.nameLbl = "";
+    //note this should probably be replaced with an array filter, but brute force works for now
+    this.memorialized.forEach((panelObj, index)=>{
+      console.log(panelObj.panelId);
+      if(panelObj.panelId == panelId) {
+        if (this.nameLbl.length>0){this.nameLbl+=", "}
+        this.nameLbl+=panelObj.memorializedFirst;
+        if (panelObj.memorializedLast.length>0) {
+          this.nameLbl+=" "+panelObj.memorializedLast;
+        }
+      }
+    })
+    if (this.nameLbl.length>30) {
+      this.nameLbl= this.nameLbl.substr(0,30)+ "...";
+    }
+    console.log (this.nameLbl);
+    return this.nameLbl;
+  }
 }
