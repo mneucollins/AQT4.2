@@ -1,6 +1,3 @@
-import { IMemorialized } from './memorialized';
-
-
 export interface IPanel {
     panelId: number; //internal identifier
     panelNum: string; //NAMES identifier
@@ -11,5 +8,4 @@ export interface IPanel {
     blockY1: number;
     blockX2: number;
     blockY2: number;
-    memorialized: IMemorialized[];
 }

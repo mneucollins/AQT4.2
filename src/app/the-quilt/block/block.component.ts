@@ -8,6 +8,8 @@ import { PanelService } from '../../services/panel.service';
 import { IPanel } from '../../interfaces/panel';
 import { MemorializedService } from '../../services/memorialized.service';
 import { IMemorialized } from '../../interfaces/memorialized';
+import { PanelmakerService } from '../../services/panelmaker.service';
+import { IPanelmaker } from '../../interfaces/panelmaker';
 
 
 @Component({
@@ -21,7 +23,8 @@ import { IMemorialized } from '../../interfaces/memorialized';
   providers: [
     BlockService,
     PanelService,
-    MemorializedService
+    MemorializedService,
+    PanelmakerService
   ],
 })
 
@@ -32,12 +35,14 @@ export class BlockComponent implements OnInit {
   errorMessage:string;
   panels:IPanel[];
   memorialized: IMemorialized[];
+  panelmakers: IPanelmaker[];
 
   constructor( 
     private _route: ActivatedRoute, 
     private _blockService: BlockService,
     private _panelService: PanelService,
-    private _memorializedService: MemorializedService
+    private _memorializedService: MemorializedService,
+    private _panelmakerService: PanelmakerService
   ) {}
 
   ngOnInit():void {
@@ -56,16 +61,22 @@ export class BlockComponent implements OnInit {
       .subscribe(memorialized=>this.memorialized=memorialized,
         error => this.errorMessage = <any>error);;
 
+    this._panelmakerService.getPanelmakerInfo(blockId)
+      .subscribe(panelmakers=>this.panelmakers=panelmakers,
+        error => this.errorMessage = <any>error);;
+
+
   }
   
   
   show: boolean;
   toggleHidden(item): void {
     // a little counter-intuitive here, but in the template, the [hidden] attribute
-    // is assigned the boolean result of the expression hide!==panel.panelId
+    // is assigned the boolean result of the expression show!==panel.panelId
     // that is, if it is true, it is hidden, if it is false, it is shown.
-    this.show = item; 
-    }
-
+    this.show = item;
+    //this should be called upon to open up the panel information for a found panel
+  }
+  
 
 }

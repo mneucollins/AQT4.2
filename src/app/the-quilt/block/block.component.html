@@ -2,8 +2,8 @@
 	<div class="container-fluid">
 		<div class="row spaceabove20">
 			<div class="col-xs-offset-1 col-xs-10">
-				<div id="block-heading">
-				<span class="txt-reverse">Quilt Block: {{block.blockNum}}</span> 
+				<div id="block-heading" class="txt-reverse">
+					Quilt Block: {{block.blockNum}}
 				</div>
 			</div>
 		</div>
@@ -11,8 +11,7 @@
 			<div class = "col-xs-offset-1 col-xs-10 col-sm-7">
 				<img src='/assets/images/blockimg/{{block.imageUrl}}' width="100%">
 			</div>
-
-			<div class = "col-sm-4">
+			<div class = "col-sm-4 col-xs-11">
 				<div *ngFor="let panel of panels">
 					<div [id]="panel.panelId" 
 						class = "row panel-button txt-reverse" 
@@ -21,12 +20,33 @@
 					</div>
 
 					<div class="panel-info" [hidden]="show!==panel.panelId">
-						{{panel.panelId}}
-						{{show}}
-						Panel Info Goes Here and will be hidden <br />
-						with toggled visibility based upon<br />
-						something not yet written.
-					
+						<ul>
+							<li *ngIf="panel.dateRecd">Date Panel Received: {{panel.dateRecd}}<br /></li>
+							<li> Memorialized:
+								<ul>
+									<div *ngFor="let eachMemorialized of memorialized">
+										<div *ngIf="eachMemorialized.panelId==panel.panelId">
+											<li>{{eachMemorialized.memorializedFirst+" "+eachMemorialized.memorializedLast}}
+												<div *ngIf="eachMemorialized.dob || eachMemorialized.dod">
+													<div *ngIf="eachMemorialized.dob">{{"&nbsp;&nbsp;born: "+eachMemorialized.dob+"&nbsp;&nbsp;died: "+eachMemorialized.dod}}</div>
+												</div>
+											</li>
+										</div>
+									</div>									
+								</ul>
+							</li>
+							<div *ngFor="let panelmaker of panelmakers">
+								<div *ngIf="panelmaker.panelId==panel.panelId">
+									<li>Panelmaker:
+										<ul>
+										<li>{{panelmaker.panelmakerFirst+" "+panelmaker.panelmakerLast}}
+											<div *ngIf="panelmaker.relationship">{{"&nbsp;&mdash;&nbsp;"+panelmaker.relationship}}</div>
+										</li>
+										</ul>
+									</li>
+								</div>
+							</div>
+						</ul>					
 					</div>
 				</div>
 			</div>
