@@ -83,10 +83,6 @@
   @include bp(iphone-portrait) {
     width: 75%;
   }
-  @include bp(iphone-portrait2) {
-    width: 80%;
-  }
-
 }
 
 .panel-info {
