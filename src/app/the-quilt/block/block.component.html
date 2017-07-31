@@ -2,44 +2,59 @@
 	<div class="container-fluid">
 		<div class="row spaceabove20">
 			<div class="col-xs-offset-1 col-xs-10">
-				<div id="block-heading">
-				<span class="txt-reverse">Quilt Block: {{block.blockNum}}</span> 
+				<div id="block-heading" class="txt-reverse">
+					Quilt Block: {{block.blockNum}}
 				</div>
 			</div>
 		</div>
 		<div class="row spaceabove20">
-			<div class = "col-xs-offset-1 col-xs-10 col-sm-7">
-				<img src='/assets/images/blockimg/{{block.imageUrl}}' width="100%">
+			<div class = "col-sm-7 col-sm-offset-1 pad-adjust-left">
+				<img src='/assets/images/blockimg/{{block.imageUrl}}'  class="panel-img">
 			</div>
+			<div class = "col-sm-4 col-xs-11">
+				<div *ngFor="let panel of panels">
+					<div class="row spaceabove20 vcenter-container panel-button" 
+						[id]="panel.panelId" 
+						(click)='toggleHidden(panel.panelId)'>
 
-			<p>TODO: convert these to bootstrap collapsible with panel info, native bootstrap does not work, may need to install ngx-bootstrap directives</p>
-			<div class = "col-sm-4">
-				<div class = "row panel-button">
-					<span class="txt-reverse">Panel1</span>
+						<div class="col-xs-9 button-label txt-reverse">
+							{{panel.panelNum}}:<br />{{buildNameLabel(panel.panelId)}} 
+						</div>
+						<div class="col-xs-2 icon-down vcenter-content right-align"  [hidden]="show===panel.panelId"></div>
+					</div>
+					<div class="panel-info row" [hidden]="show!==panel.panelId">
+						<ul>
+							<li *ngIf="panel.dateRecd">Date Panel Received: {{panel.dateRecd}}<br /></li>
+							<li> Memorialized:
+								<ul>
+									<div *ngFor="let eachMemorialized of memorialized">
+										<div *ngIf="eachMemorialized.panelId==panel.panelId">
+											<li>{{eachMemorialized.memorializedFirst+" "+eachMemorialized.memorializedLast}}
+												<div *ngIf="eachMemorialized.dob || eachMemorialized.dod">
+													<div *ngIf="eachMemorialized.dob">{{"&nbsp;&nbsp;born: "+eachMemorialized.dob+"&nbsp;&nbsp;died: "+eachMemorialized.dod}}</div>
+												</div>
+											</li>
+										</div>
+									</div>									
+								</ul>
+							</li>
+							<div *ngFor="let panelmaker of panelmakers">
+								<div *ngIf="panelmaker.panelId==panel.panelId">
+									<li>Panelmaker:
+										<ul>
+										<li>{{panelmaker.panelmakerFirst+" "+panelmaker.panelmakerLast}}
+											<div *ngIf="panelmaker.relationship">{{"&nbsp;&mdash;&nbsp;"+panelmaker.relationship}}</div>
+										</li>
+										</ul>
+									</li>
+								</div>
+							</div>
+						</ul>					
+					</div>
+					
 				</div>
-				<div class = "row panel-button">
-					Panel2
-				</div>
-				<div class = "row panel-button">
-					Panel3
-				</div>
-				<div class = "row panel-button">
-					Panel4
-				</div>
-				<div class = "row panel-button">
-					Panel5
-				</div>
-				<div class = "row panel-button">
-					Panel6
-				</div>
-				<div class = "row panel-button">
-					Panel7
-				</div>
-				<div class = "row panel-button">
-					Panel8
-				</div>
-
 			</div>
 		</div>
 	</div>
+	<globalnav4></globalnav4>
 </div>

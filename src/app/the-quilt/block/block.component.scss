@@ -1,3 +1,4 @@
+@import "~mediaqueries.scss";
 @import "~variables.scss";
 
 #block-heading {
@@ -5,17 +6,96 @@
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 2px;
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1.2em;
   margin-top: 2%;
-  /*margin-left: -10%;*/ }
-
+  @include bp(iphone6plus-landscape){
+    font-size: 1.7em; 
+    padding-left: 2%; 
+  }
+}
+ 
 .panel-button {
+  background-color: $lt-pink;
+}
+.button-label {
+    font-size: 1.4em;
+    text-align: left;
+    text-transform: uppercase;
+    padding-top: 1%;
+    padding-bottom: 1%; 
+}
+
+
+.pad-adjust-left{
+  padding-left:0;
+  @include bp(iphone){
+    padding-left:8%;
+  }
+}
+
+.panel-img {
+  width:100%;
+  @include bp(iphone6plus-landscape){
+    width: 710px;
+    margin-left: 8%;
+    margin-right: auto; 
+  }
+  @include bp(iphone6-landscape){
+    width: 640px;
+    margin-left: 7%;
+    margin-right: auto; 
+  }
+  @include bp(iphone5-landscape){
+    width: 550px;
+    margin-left: 7%;
+    margin-right: auto; 
+  }
+  @include bp(iphone){
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  
+
+}
+  
+.panel-button {
+    @include bp(iphone){
+      padding-left: 10%;
+      margin-left: 5%;
+    }
   text-align: left;
+  text-transform: uppercase;
   width: 102%;
   margin-top: 10px;
-  padding-left: 10%;
+  padding-left: 5%;
   padding-top: 6px;
   padding-bottom: 4px;
   background-color: $lt-pink;
   }
+.button-text{
+  width:80%
+}
+
+.panel-more{
+  width: 100%;
+  @include bp(iphone-portrait) {
+    width: 75%;
+  }
+}
+
+.panel-info {
+    @include bp(iphone){
+      padding-left: 5%;
+      margin-left: 12%;
+    }
+  background-color: $bittersweet;
+  text-align: left;
+  color: $reverse;
+  margin-left: 3%;
+  padding-left: 2%;
+  // visibility: hidden;
+}
+
+[hidden] { display: none !important;}

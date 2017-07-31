@@ -8,8 +8,12 @@ $media-queries: true;
     $bp-ipad-max: 1024px;
     $bp-ipad-min: 768px;
     $bp-iphone5-max: 568px;
+    $bp-iphone6-max: 667px;
     $bp-iphone-max: 480px;
     $bp-iphone-min: 320px;
+    
+    $bp-iphone6plus-min: 414px;
+    $bp-iphone6plus-max: 736px;
     // **
     // --------------------
     // Options of screen breakpoints:
@@ -21,6 +25,11 @@ $media-queries: true;
     // 6. iphone5-landscape - to 568px
     // 7. iphone - from 320px to 480px
     // 8. iphone-portrait - to 320px
+    //  MN:addd some additional bp's
+    // 9. iphone5-landscape
+    // 10. iphone6plus-landscape
+    // these accomodate a little more fine-grained view of for quilt blocks
+
     // --------------------
     // **
     @if $point == large-screen {
@@ -70,6 +79,22 @@ $media-queries: true;
         @content;
       }
     }
+    @if $point == iphone6-landscape {
+      @media // iPhone 6 (landscape)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-iphone6-max}){
+        @content;
+      }
+    }
+    @if $point == iphone6plus-landscape {
+      @media // iPhone 6 Plus (landscape)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-iphone6plus-max}){
+        @content;
+      }
+    }
     @if $point == iphone {
       @media // iPhone (portrait and landscape)
       handheld,
@@ -87,16 +112,7 @@ $media-queries: true;
         @content;
       }
     }
-    @if $point == iphone-portrait2 {
-      @media // iPhone (portrait)
-      handheld,
-      only screen and (min-device-pixel-ratio: 2)
-      and (min-device-width : 414px)
-      and (max-device-width: 736px)
-      and (orientation : landscape){
-        @content;
-      }
-    }  }
+  }
 }
 
 // @media only screen 

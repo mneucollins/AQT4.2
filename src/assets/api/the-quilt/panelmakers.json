@@ -2,6 +2,7 @@
     {
         "panelmakerId": "10001",
         "panelId": "1908.1",
+        "blockID":"1908",
         "panelmakerFirst": "Kenneth",
         "panelmakerLast": "Goss",
         "relationship": "Brother"
@@ -9,6 +10,7 @@
     {
         "panelmakerId": "10002",
         "panelId": "1908.2",
+        "blockID":"1908",
         "panelmakerFirst": "Lori",
         "panelmakerLast": "Wood",
         "relationship": ""
@@ -16,6 +18,7 @@
     {
         "panelmakerId": "10003",
         "panelId": "1908.3",
+        "blockID":"1908",
         "panelmakerFirst": "Immy",
         "panelmakerLast": "Ferrra",
         "relationship": "Mother"
@@ -23,6 +26,7 @@
     {
         "panelmakerId": "10004",
         "panelId": "1908.3",
+        "blockID":"1908",
         "panelmakerFirst": "Philip",
         "panelmakerLast": "Ferrara, Sr",
         "relationship": "Father"
@@ -30,6 +34,7 @@
     {
         "panelmakerId": "10005",
         "panelId": "1908.4",
+        "blockID":"1908",
         "panelmakerFirst": "Consuelo (Connie)",
         "panelmakerLast": "Oquendo",
         "relationship": "Friend"
@@ -37,6 +42,7 @@
     {
         "panelmakerId": "10005",
         "panelId": "1908.5",
+        "blockID":"1908",
         "panelmakerFirst": "Consuelo (Connie)",
         "panelmakerLast": "Oquendo",
         "relationship": "Friend"
@@ -44,6 +50,7 @@
     {
         "panelmakerId": "10005",
         "panelId": "1908.6",
+        "blockID":"1908",
         "panelmakerFirst": "Consuelo (Connie)",
         "panelmakerLast": "Oquendo",
         "relationship": "Friend"
@@ -51,6 +58,7 @@
     {
         "panelmakerId": "10005",
         "panelId": "1908.7",
+        "blockID":"1908",
         "panelmakerFirst": "Thomas",
         "panelmakerLast": "Clark",
         "relationship": ""
@@ -58,6 +66,7 @@
     {
         "panelmakerId": "10005",
         "panelId": "1908.8",
+        "blockID":"1908",
         "panelmakerFirst": "Annie",
         "panelmakerLast": "McPherson",
         "relationship": "Friend"

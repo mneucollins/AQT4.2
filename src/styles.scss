@@ -11,7 +11,7 @@ body {
     position: fixed;
     left: 0px;
     width: 100%;
-    min-height: 72px; 
+    height: 72px; 
     bottom: 0;
     margin-bottom: 0;
     margin-left: auto;
@@ -192,6 +192,7 @@ body {
   height: 25px;
   margin-top: 5px; }
 
+
 .icon-explore {
   /*magnifying glass, open background*/
   background-repeat: no-repeat;
@@ -201,6 +202,14 @@ body {
   position: relative;
   bottom: 50px;
   float: right; }
+
+.icon-down {
+  width: 43px;
+  height: 43px;
+  margin-top: 5px; 
+  background-image: url("./assets/images/icons/arrow-down-43.png");
+}
+
 
 .icon-home-text-reverse, .icon-info-text-reverse, .icon-back-text-reverse,
 .icon-thread-text-reverse, .icon-favorite-text-reverse, .icon-tour-text-reverse {
