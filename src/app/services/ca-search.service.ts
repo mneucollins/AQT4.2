@@ -5,7 +5,36 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
+//These are the user-visible search types this service provides to external modules.
+//The most prominent use of this variable is populating the Find page search form.
+//This should not include functions that are used internally to get extra data.
+export const queryTypes = ["Name", "Maker Name", "Block ID"];
 
+//Internal Constants for CA Search
+//external URL
+const ca_base:string = "http://atecquilt.utdallas.edu/collectiveaccess/providence/service.php/find/";
+//sandbox URL
+const ca_testbase:string = "http://quilt.utdallas.edu/collectiveaccess/providence/service.php/find/";
+const ca_tables = {
+  //We could generate queryTypes from these keys for greter automation, but this table may hold
+  //more query types than we make publicly visible
+
+  //replace this with a Map object in future
+  name: "",
+  year: "",
+  maker: "",
+  city: "",
+  block: "",
+  panel: "",
+  test: "ca_objects/"
+};
+
+const ca_begin_search = "?pretty=1&q="; //universal search start term; to be followed by query string
+const browse_term = "*"; //universal browsing term
+
+
+
+//Test-related data
 export interface TestRecord {
   id:number,
   username:string,
@@ -19,22 +48,6 @@ export class CaSearchService {
 
   http:Http;
   //auth: String;
-
-  //Collective Access DB
-  ca_base:string = "http://atecquilt.utdallas.edu/collectiveaccess/providence/service.php/find/";
-  ca_testbase:string = "http://quilt.utdallas.edu/collectiveaccess/providence/service.php/find/";
-  ca_tables = {
-    name: "",
-    year: "",
-    maker: "",
-    city: "",
-    block: "",
-    panel: "",
-    test: "ca_objects/"
-  };
-
-  begin_search = "?pretty=1&q=";
-  browse_term = "*";
 
   response:any;
 
@@ -57,10 +70,11 @@ export class CaSearchService {
       return results;
   }
 
-  getResults(querytype:string, querystring:string):Observable<any[]> {
+  getSearchResults(querytype:string, querystring:string):Observable<any[]> {
+    //This function specifically manages searching from the Find page
     var search_term = "*" + querystring + "*";
-    var url = this.ca_testbase + this.ca_tables.test + this.begin_search + this.browse_term;
-    //var url = this.ca_base + this.ca_tables.test + this.begin_search + search_term;
+    var url = ca_testbase + ca_tables.test + ca_begin_search + browse_term;
+    //var url = ca_base + ca_tables.test + ca_begin_search + search_term;
 
     var result = this.http
       .get(url)
@@ -73,7 +87,7 @@ export class CaSearchService {
 
   getMedia():string {
     //return media URL
-    var url = this.ca_testbase + this.ca_tables.test + this.begin_search + this.browse_term;
+    var url = ca_testbase + ca_tables.test + ca_begin_search + browse_term;
 
 
     return "";
