@@ -53,6 +53,15 @@ import { AidsChildren07Component } from './aids-children/aids-children-07/aids-c
 import { AidsChildren08Component } from './aids-children/aids-children-08/aids-children-08.component';
 import { AidsChildren09Component } from './aids-children/aids-children-09/aids-children-09.component';
 import { AidsChildrenEndComponent } from './aids-children/aids-children-end/aids-children-end.component';
+import { AidsCommunity01Component } from './aids-community/aids-community-01/aids-community-01.component';
+import { AidsCommunity02Component } from './aids-community/aids-community-02/aids-community-02.component';
+import { AidsCommunity03Component } from './aids-community/aids-community-03/aids-community-03.component';
+import { AidsCommunity04Component } from './aids-community/aids-community-04/aids-community-04.component';
+import { AidsCommunity05Component } from './aids-community/aids-community-05/aids-community-05.component';
+import { AidsCommunity06Component } from './aids-community/aids-community-06/aids-community-06.component';
+import { AidsCommunity07Component } from './aids-community/aids-community-07/aids-community-07.component';
+import { AidsCommunity08Component } from './aids-community/aids-community-08/aids-community-08.component';
+import { AidsCommunityEndComponent } from './aids-community/aids-community-end/aids-community-end.component';
 
 
 @NgModule({
@@ -105,6 +114,15 @@ import { AidsChildrenEndComponent } from './aids-children/aids-children-end/aids
         AidsChildren08Component,
         AidsChildren09Component,
         AidsChildrenEndComponent,
+        AidsCommunity01Component,
+        AidsCommunity02Component,
+        AidsCommunity03Component,
+        AidsCommunity04Component,
+        AidsCommunity05Component,
+        AidsCommunity06Component,
+        AidsCommunity07Component,
+        AidsCommunity08Component,
+        AidsCommunityEndComponent,
     ],
 
     imports:[
@@ -159,6 +177,15 @@ import { AidsChildrenEndComponent } from './aids-children/aids-children-end/aids
             { path: 'aids-children-08', component: AidsChildren08Component },
             { path: 'aids-children-09', component: AidsChildren09Component },
             { path: 'aids-children-end', component: AidsChildrenEndComponent },
+            { path: 'aids-community-01', component: AidsCommunity01Component },
+            { path: 'aids-community-02', component: AidsCommunity02Component },
+            { path: 'aids-community-03', component: AidsCommunity03Component },
+            { path: 'aids-community-04', component: AidsCommunity04Component },
+            { path: 'aids-community-05', component: AidsCommunity05Component },
+            { path: 'aids-community-06', component: AidsCommunity06Component },
+            { path: 'aids-community-07', component: AidsCommunity07Component },
+            { path: 'aids-community-08', component: AidsCommunity08Component },
+            { path: 'aids-community-end', component: AidsCommunityEndComponent },
         ])
     ],
     providers:[]

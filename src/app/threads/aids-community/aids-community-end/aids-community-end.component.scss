@@ -1,0 +1,22 @@
+@import "~variables.scss";
+
+#stitchlink {
+    width:20%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15%;
+}
+
+.stitchlink_txt{
+    padding-top: 30px;
+    color: $lt-green;
+    font-size: 2em;
+    text-transform: uppercase;    
+    width:50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.stitchlink_txt:hover{
+    color: white;
+}
