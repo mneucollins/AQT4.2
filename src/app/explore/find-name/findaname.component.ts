@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import {CaSearchService} from "../../services/ca-search.service";
+import {queryTypes} from "../../services/ca-search.service";
 import {TestRecord} from "../../services/ca-search.service";
 
 @Component({
@@ -18,7 +19,7 @@ export class FindANameComponent{
     constructor ( private _router: Router, private ca: CaSearchService){};
     submitted = false;
 
-    querytypes = ["Name", "Year", "Maker Name", "City", "Block ID"];
+    querytypes = queryTypes; //set to the exported query types from the search service
 
     model = {
         querytype: "Name",
