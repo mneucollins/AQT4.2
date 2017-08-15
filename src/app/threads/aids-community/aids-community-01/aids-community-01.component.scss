@@ -1,18 +1,30 @@
-.title_text, .heading {
-    text-align: left;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-    line-height: 1.2em;
-    color: #D7DF23;
-}
+// .title_text, .heading {
+//     text-align: left;
+//     text-transform: uppercase;
+//     font-weight: bold;
+//     letter-spacing: 2px;
+//     line-height: 1.2em;
+//     color: #D7DF23;
+// }
 
-.title_text{
-    font-size: 6em;
-    margin-top: 0;
-    position: fixed;
-    text-shadow: 3px 3px 6px black;
-}
+// .title_text{
+//     font-size: 6em;
+//     margin-top: 0;
+//     position: fixed;
+//     text-shadow: 3px 3px 6px black;
+// }
+
+// .subtitle {
+//     margin-top:18%;
+//     position:fixed;
+//     font-size: 2.5em;
+//     color: white;
+//     text-align: left;
+//     text-shadow: 2px 2px 2px black;
+//     /*margin-left: 25px;*/
+// }
+
+@import "~mediaqueries.scss";
 
 .subtitle {
     margin-top:18%;
@@ -20,6 +32,15 @@
     font-size: 2.5em;
     color: white;
     text-align: left;
-    text-shadow: 2px 2px 2px black;
-    /*margin-left: 25px;*/
+    margin-left: 25px;
+
+    @include bp(iphone6plus-landscape){
+        margin-top: 5%;
+        margin-right: 10%
+    }
+    @include bp(iphone){
+        margin-top: 25%;
+        margin-left: 25%;
+        font-size: 2em;
+    }
 }

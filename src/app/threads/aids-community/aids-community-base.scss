@@ -1,20 +1,85 @@
+// #community_bak_light, #community_bak_dark {
+//   background-repeat: no-repeat;
+//   background-position: 40% 20%;
+//   background-attachment: fixed;
+//   background-size: 100% auto;
+//   /*background-size: auto 110%;*/
+//   min-height: 1200px;
+//   text-align: center;
+//   overflow: hidden;
+//   margin-left: -20px;
+//   margin-right: -20px;
+//   background-color: #666666;
+// }
+// #community_bak_light {
+//   background-image: url("../../../assets/images/backgrounds/disco_ball_back_bright.jpg");
+// }
+
+// #community_bak_dark {
+//   background-image: url("../../../assets/images/backgrounds/disco_ball_back_dark.jpg");
+// }
+
+@import "~mediaqueries.scss";
+
 #community_bak_light, #community_bak_dark {
   background-repeat: no-repeat;
   background-position: 40% 20%;
   background-attachment: fixed;
-  background-size: 100% auto;
-  /*background-size: auto 110%;*/
-  min-height: 1200px;
+  /*background-size: 100% auto;*/
+  background-size: auto 110%;
+  min-height: 1024px;
   text-align: center;
   overflow: hidden;
   margin-left: -20px;
   margin-right: -20px;
   background-color: #666666;
 }
+
+
 #community_bak_light {
   background-image: url("../../../assets/images/backgrounds/disco_ball_back_bright.jpg");
 }
 
 #community_bak_dark {
   background-image: url("../../../assets/images/backgrounds/disco_ball_back_dark.jpg");
+}
+
+
+.heading {
+  font-size: 3em;
+  margin-top: 5%;
+  @include bp(iphone) {
+    font-size: 2em;
+    margin-top: 15%;
+  }      
+}
+
+.body_text {
+font-size: 2em;
+@include bp(iphone) {
+  font-size: 1.5em;
+  margin-left: 25px;
+}
+}
+.byline {
+//defined in threads-base.scss  
+@include bp(iphone) {
+  font-size: 1.4em;
+}
+}
+
+#audioplayer {
+width:100%;
+}
+
+.title_text{
+font-size: 6em;
+@include bp(iphone){
+  margin-top: 25%; 
+  font-size: 3em;
+}
+@include bp(iphone5-landscape){
+  margin-top: 0px;
+}
+  
 }

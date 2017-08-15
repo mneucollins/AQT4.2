@@ -9,7 +9,7 @@
 		</div>
 		<div class="row spaceabove20">
 			<div class = "col-sm-7 col-sm-offset-1 pad-adjust-left">
-				<img src='/assets/images/blockimg/{{block.imageUrl}}'  class="panel-img">
+				<img src='./assets/images/blockimg/{{block.imageUrl}}'  class="panel-img">
 			</div>
 			<div class = "col-sm-4 col-xs-11">
 				<div *ngFor="let panel of panels">
@@ -31,7 +31,7 @@
 										<div *ngIf="eachMemorialized.panelId==panel.panelId">
 											<li>{{eachMemorialized.memorializedFirst+" "+eachMemorialized.memorializedLast}}
 												<div *ngIf="eachMemorialized.dob || eachMemorialized.dod">
-													<div *ngIf="eachMemorialized.dob">{{"&nbsp;&nbsp;born: "+eachMemorialized.dob+"&nbsp;&nbsp;died: "+eachMemorialized.dod}}</div>
+													<div *ngIf="eachMemorialized.dob">{{"&nbsp;&nbsp;b. "+eachMemorialized.dob+"&nbsp;&nbsp;d. "+eachMemorialized.dod}}</div>
 												</div>
 											</li>
 										</div>

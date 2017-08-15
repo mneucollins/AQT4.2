@@ -1,7 +1,7 @@
 @import "~variables.scss";
 
 #background_1{
-  background-image: url("~/assets/images/backgrounds/background_white_c.jpg");
+  background-image: url("~assets/images/backgrounds/background_white_c.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -28,14 +28,10 @@
   margin-top: 125px;
 }
 
-
 .logoContainer img {
   display: inline-block;
   width: 50%;
 }
-
-
-
 
 @media screen and (orientation: landscape) {
     .logoContainer {

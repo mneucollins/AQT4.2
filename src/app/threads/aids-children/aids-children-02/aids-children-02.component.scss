@@ -1,3 +1,7 @@
-.body_text{
-    font-size: 2.5em;
+@import "~mediaqueries.scss";
+.heading {
+  @include bp(iphone) {
+    font-size: 2em;
+    margin-top: 7%;
+  }      
 }

@@ -1,4 +1,5 @@
 
+@import "~mediaqueries.scss";
 
 #audioplayer {
   width:80%;
@@ -12,6 +13,9 @@
 
 .body_text {
   font-size: 2em;
+  @include bp(iphone) {
+    font-size: 1.5em;
+  }
 }
 
 /*generic smartphone in landscape mode*/

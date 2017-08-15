@@ -1,3 +1,5 @@
+@import "~mediaqueries.scss";
+
 #women_bak_light, #women_bak_dark {
   background-repeat: no-repeat;
   background-position: 40% 20%;
@@ -17,4 +19,45 @@
 
 #women_bak_dark {
   background-image: url("../../../assets/images/backgrounds/quilt_bak_dark.jpg");
+}
+.heading {
+  font-size: 3em;
+  margin-top: 5%;
+  @include bp(iphone) {
+    font-size: 2em;
+    margin-top: 15%;
+  }      
+}
+
+.body_text {
+font-size: 2em;
+@include bp(iphone) {
+  font-size: 1.5em;
+  margin-left: 25px;
+}
+}
+.byline {
+//defined in threads-base.scss  
+@include bp(iphone) {
+  font-size: 1.4em;
+}
+}
+
+#audioplayer {
+width:100%;
+}
+
+.title_text{
+  font-size: 6em;
+
+  @include bp(iphone6plus-landscape){
+    font-size: 4em;
+    margin-top: 5%;
+  }  
+    @include bp(iphone5-landscape){
+    margin-top: 5%;
+  }
+  @include bp(iphone){
+    margin-top: 25%;
+  }
 }

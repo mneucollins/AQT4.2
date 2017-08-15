@@ -1,3 +1,5 @@
+@import "~mediaqueries.scss";
+
 #aa_bak3 {
   background-image: url("../../../assets/images/backgrounds/sewing_machines_bak_dark.jpg");
   background-repeat: no-repeat;
@@ -10,6 +12,7 @@
   margin-left: -20px;
   margin-right: -20px;
   background-color: #666666;
+  
 }
 
 #aa_bak2 {
@@ -29,35 +32,49 @@
 .heading {
     font-size: 3em;
     margin-top: 5%;
+    @include bp(iphone) {
+      font-size: 2em;
+      margin-top: 15%;
+    }      
 }
 
+.body_text {
+  font-size: 2em;
+  @include bp(iphone) {
+    font-size: 1.5em;
+    margin-left: 25px;
+  }
+}
+.byline {
+//defined in threads-base.scss  
+  @include bp(iphone) {
+    font-size: 1.4em;
+  }
+}
 
-/*generic smartphone in landscape mode*/
-@media only screen 
-    and (min-width: 320px) 
-    and (max-width: 736px) 
-    and (orientation: landscape) {
-      .title_text{
-        font-size: 3.8em;
-        margin-top: 5%;
-      }
-      #aa_bak1, #aa_bak_2 {
-          background-size: auto 100%;
-      }
-    }
+#audioplayer {
+  width:100%;
+}
+
+.title_text{
+  font-size: 6em;
+  @include bp(iphone){
+      margin-top: 25%; 
+  }
+  @include bp(iphone5-landscape){
+      font-size: 3em;
+      margin-top: 0px;
+  }  
+}
+      
 
 /*generic smartphone in portrait mode*/
-@media only screen 
-    and (min-width: 320px) 
-    and (max-width: 736px) 
-    and (orientation: portrait) {
-      .title_text{
-        margin-top: 5%;
-        font-size: 4em;
-      }
-      #aa_bak1, #aa_bak2 {
-          background-size: auto 100%;
+// @media only screen 
+//     and (min-width: 320px) 
+//     and (max-width: 736px) 
+//     and (orientation: portrait) {
+//       .title_text{
+//         margin-top: 5%;
+//         font-size: 4em;
 
-      }
-
-    }
+//     }
