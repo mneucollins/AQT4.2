@@ -1,0 +1,43 @@
+@import "~variables.scss";
+@import "~mediaqueries.scss";
+
+
+// @include bp(iphone) {
+#my_story-heading{
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px; 
+    padding-top: 100px;
+    @include bp(iphone6-portrait) {
+        padding-top: 10px;
+    }
+}
+
+.media-icons {
+    padding-top:100px;
+    @include bp(iphone6-portrait) {
+        padding-top: 10px;
+    }    
+}
+
+
+#background_mystory{
+    background-image: url("../../../assets/images/backgrounds/background-blue.jpg");    
+    background-repeat: no-repeat;
+    background-position: 40% 0%;
+    background-attachment: fixed;
+    min-height: 800px;
+    overflow: hidden; 
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+.instruction-txt {
+    font-size: 1.6em;
+    line-height: 1.9em;
+    text-transform: uppercase;
+    color:$teal;
+    padding-top: 1%;
+    padding-bottom: 1%; 
+}

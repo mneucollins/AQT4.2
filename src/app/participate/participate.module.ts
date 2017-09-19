@@ -6,12 +6,14 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 // Components
 import { MyParticipationComponent } from './participate.component';
+import { AddMediaComponent } from './add-media/add-media.component';
 
 
 
 @NgModule({
     declarations:[
         MyParticipationComponent,
+        AddMediaComponent,
         // ExploreRandomComponent,
     ],
 
@@ -21,6 +23,7 @@ import { MyParticipationComponent } from './participate.component';
         SharedModule,
         RouterModule.forChild([
             { path: 'my_quilt', component: MyParticipationComponent },
+            { path: 'add_media', component: AddMediaComponent }
             // { path: 'exploreRandom', component: ExploreRandomComponent }
         ])
     ],

@@ -9,6 +9,7 @@ $media-queries: true;
     $bp-ipad-min: 768px;
     $bp-iphone5-max: 568px;
     $bp-iphone6-max: 667px;
+    $bp-iphone6-min: 375px;
     $bp-iphone-max: 480px;
     $bp-iphone-min: 320px;
     
@@ -87,6 +88,15 @@ $media-queries: true;
         @content;
       }
     }
+    @if $point == iphone6-portrait {
+      @media // iPhone 6 (portrait)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-iphone6-min}){
+        @content;
+      }
+    }
+
     @if $point == iphone6plus-landscape {
       @media // iPhone 6 Plus (landscape)
       handheld,

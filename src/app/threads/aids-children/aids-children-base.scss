@@ -5,8 +5,8 @@
   background-position: 40% 20%;
   background-attachment: fixed;
   /*background-size: 100% auto;*/
-  background-size: auto 110%;
-  min-height: 1024px;
+  background-size: auto 120%;
+  min-height: 1200px;
   text-align: center;
   overflow: hidden;
   margin-left: -20px;
@@ -49,15 +49,4 @@ font-size: 2em;
 width:100%;
 }
 
-.title_text{
-font-size: 6em;
-@include bp(iphone){
-  margin-top: 25%; 
-  font-size: 3em;
-}
-@include bp(iphone5-landscape){
-  margin-top: 0px;
-}
-  
-}
  

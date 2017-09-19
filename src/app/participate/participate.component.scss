@@ -1,7 +1,7 @@
+@import "~variables.scss";
 
-#background_2 {
-  /*explore page*/
-    background-image: url(/app/assets/images/backgrounds/background2.jpg);
+#background_myquilt{
+    background-image: url("../../assets/images/backgrounds/background-violet.jpg");    
     background-repeat: no-repeat;
     background-position: 40% 0%;
     background-attachment: fixed;
@@ -12,16 +12,34 @@
 	margin-right: -20px;
 }
 
-.explore_the_quilt-label {
-    font-size: 1.4em;
-    line-height: 1.9em;
+.button-default {
+    display: table;
+    width: 100%;
+    padding-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;    
+}
+
+.button-label {
+    font-size: 1.8em;
     text-align: left;
     text-transform: uppercase;
     padding-top: 1%;
     padding-bottom: 1%; 
 }
 
-#explore-heading{
+#add_media-button {
+    @extend .button-default;
+    // top: 40%;
+    background-color: $lt-purple; 
+}
+
+#my_favorites-button, #my_albums-button {
+    @extend .button-default;
+    background-color: $lavender; 
+}
+
+#my_quilt-heading{
     text-align: left;
     text-transform: uppercase;
     font-weight: bold;
@@ -41,3 +59,8 @@
 
 #explore_stories-button {
   background-color: #EF4036; }
+
+  #explore_stories-button {
+    @extend .button-default;   
+    background-color: $bittersweet; }
+

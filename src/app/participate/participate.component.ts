@@ -3,7 +3,10 @@ import { Router } from '@angular/router';
 
 @Component({
     templateUrl: './participate.component.html',
-    styleUrls: ['./participate.component.scss']
+    styleUrls: [
+        './participate-base.scss',
+        './participate.component.scss'
+    ]
 })
 
 export class MyParticipationComponent{
@@ -18,7 +21,7 @@ export class MyParticipationComponent{
     }
 
     onAddContent(): void {
-        //this._router.navigate(['/add_my_stories']);
+        this._router.navigate(['/add_media']);
     }
 
 }
