@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 // Components
 import { MyParticipationComponent } from './participate.component';
 import { AddMediaComponent } from './add-media/add-media.component';
+import { AddTextComponent } from './add-media/add-text/add-text.component';
 
 
 
@@ -14,6 +15,7 @@ import { AddMediaComponent } from './add-media/add-media.component';
     declarations:[
         MyParticipationComponent,
         AddMediaComponent,
+        AddTextComponent,
         // ExploreRandomComponent,
     ],
 
@@ -23,7 +25,8 @@ import { AddMediaComponent } from './add-media/add-media.component';
         SharedModule,
         RouterModule.forChild([
             { path: 'my_quilt', component: MyParticipationComponent },
-            { path: 'add_media', component: AddMediaComponent }
+            { path: 'add_media', component: AddMediaComponent },
+            { path: 'add_text', component: AddTextComponent }
             // { path: 'exploreRandom', component: ExploreRandomComponent }
         ])
     ],
